@@ -58,8 +58,6 @@
       <nav class="space-x-4">
         <a href="#coupons" class="text-gray-700 hover:text-point font-medium">오늘의 쿠폰</a>
         <a href="#hot" class="text-gray-700 hover:text-point font-medium">핫딜</a>
-        <a href="#event" class="text-gray-700 hover:text-point font-medium">이벤트</a>
-        <a href="#mart" class="text-gray-700 hover:text-point font-medium">₩1 마트</a>
       </nav>
     </div>
   </header>
@@ -77,31 +75,10 @@
     </div>
   </section>
 
-  <section id="event" class="container mx-auto px-6 py-8">
-    <h2 class="text-xl font-bold text-gray-800 mb-4">🎉 진행 중인 이벤트</h2>
-    <div class="grid gap-4 md:grid-cols-2">
-      <div class="bg-white rounded-lg shadow p-4">
-        <h3 class="text-lg font-semibold text-point">여름맞이 브랜드 특가</h3>
-        <p class="text-sm text-gray-700 mt-1">브랜드 제품 최대 60% 할인! 한정 수량으로 서둘러 참여하세요.</p>
-      </div>
-      <div class="bg-white rounded-lg shadow p-4">
-        <h3 class="text-lg font-semibold text-point">무료배송 혜택 이벤트</h3>
-        <p class="text-sm text-gray-700 mt-1">지정된 상품 구매 시 무료배송 적용! 조건 확인 필수.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="mart" class="container mx-auto px-6 py-8">
-    <h2 class="text-xl font-bold text-gray-800 mb-4">🛒 천원 마트 추천</h2>
-    <p class="text-sm text-gray-600 mb-2">₩1에 득템할 수 있는 놀라운 마트 상품!</p>
-    <a href="https://s.click.aliexpress.com/e/_₩1mart" target="_blank" class="inline-block px-6 py-2 bg-point text-white rounded-lg font-semibold hover:bg-point-dark transition">천원 마트 보러가기 →</a>
-  </section>
-
   <section class="container mx-auto px-6 py-10">
     <h2 class="text-xl font-bold text-gray-800 mb-4">🛍️ 인기 상품 추천</h2>
     <div class="overflow-x-auto">
-      <div id="product-list" class="flex gap-6 w-max pb-4">
-      </div>
+      <div id="product-list" class="flex gap-6 w-max pb-4"></div>
     </div>
   </section>
 
@@ -152,25 +129,4 @@
       {
         title: "휴대용 블루투스 스피커",
         price: "$15.90",
-        image: "https://ae01.alicdn.com/kf/SampleImage4.jpg",
-        link: "https://www.aliexpress.com/item/100503"
-      }
-    ];
-
-    const productList = document.getElementById('product-list');
-
-    products.forEach(p => {
-      const el = document.createElement('div');
-      el.className = "bg-white rounded-xl shadow p-4 transition hover:shadow-md w-60 flex-shrink-0";
-      el.innerHTML = `
-        <a href="${p.link}" target="_blank" class="block text-center">
-          <img src="${p.image}" alt="${p.title}" class="w-full h-40 object-cover rounded mb-2" />
-          <h3 class="text-sm font-semibold text-gray-700">${p.title}</h3>
-          <p class="point font-bold mt-1">${p.price}</p>
-        </a>
-      `;
-      productList.appendChild(el);
-    });
-  </script>
-</body>
-</html>
+        image: "https://ae01.alicdn.com
